@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "Veltrics — Digital Solutions for Modern Businesses",
   description: "We build beautiful, scalable web and mobile experiences.",
   icons: {
-    icon: "/veltricsFavicon.png?v=3",   // version breaks cache
-    shortcut: "/veltricsFavicon.png?v=3",
-    apple: "/veltricsFavicon.png?v=3",
+    icon: "/veltricsFavicon.jpg?v=3",   // version breaks cache
+    shortcut: "/veltricsFavicon.jpg?v=3",
+    apple: "/veltricsFavicon.jpg?v=3",
   },
 }
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/veltricsFavicon.png?v=8"
+          href="/veltricsFavicon.jpg?v=8"
           type="image/png"
         />
         <title>Veltrics — Digital Solutions for Modern Businesses</title>

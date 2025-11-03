@@ -10,7 +10,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image
-          src="/veltrics-logo-removed.png"
+          src="/veltricsFavicon.png"
           alt="Veltrics Logo"
           width={50}
           height={50}

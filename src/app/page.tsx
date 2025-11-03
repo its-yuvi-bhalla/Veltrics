@@ -13,8 +13,8 @@ export const metadata = {
   icons: {
     icons: {
     icon: "https://media.licdn.com/dms/image/v2/D4E0BAQEwnGNyg_b-gA/company-logo_100_100/B4EZoph.cMGUAQ-/0/1761633365412/veltrics_logo?e=1763596800&v=beta&t=oEOvwPFlnjToOHzWqf7hMi_DiNMgmXDwVtxWEHxssAk",   // version breaks cache
-    shortcut: "/veltricsFavicon.png",
-    apple: "/veltricsFavicon.png",
+    shortcut: "/veltricsFavicon.jpg",
+    apple: "/veltricsFavicon.jpg",
   },
 }
 }
