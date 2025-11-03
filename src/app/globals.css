@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Quicksand:wght@300&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-main: 'Quicksand';
+  --font-weight:300;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -22,5 +28,34 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
+}
+
+/* Hero background video styling */
+.hero-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/vid.mp4") no-repeat center center / cover;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-bg video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
 }
