@@ -9,9 +9,9 @@ function Hero() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
+          className="absolute inset-0 w-full h-full object-cover opacity-100 -z-10"
         >
-          <source src="/vid.mp4" type="video/mp4" />
+          <source src="/ChyEbZ4.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
