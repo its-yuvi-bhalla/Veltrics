@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'shawneephysiotherapy.ca',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        pathname: '/**',
+      }
     ],
   },
 }
