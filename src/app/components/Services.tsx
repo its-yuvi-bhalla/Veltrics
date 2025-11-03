@@ -98,9 +98,7 @@ export default function Services() {
         ].map(({ icon: Icon, title, desc, span }) => (
           <div
             key={title}
-            className={`bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-lg hover:bg-white/[0.07] hover:scale-[1.02] transition-transform duration-300 ${
-              span ? "sm:col-span-2" : ""
-            }`}
+            className={`bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-lg hover:bg-white/[0.07] hover:scale-[1.02] transition-transform duration-300}`}
           >
             <div className="flex items-center gap-3 mb-3">
               <Icon className="w-6 h-6 text-white" />
