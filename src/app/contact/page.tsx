@@ -133,7 +133,7 @@ export default function ContactPage() {
           <MapPin className="w-5 h-5" />
           <p>Calgary, Alberta</p>
         </div>
-      </div>
+      </div>  
     </section>
   )
 }

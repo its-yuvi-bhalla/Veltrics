@@ -37,7 +37,7 @@ export default function Projects() {
             />
 
             {/* Overlay Button */}
-            <div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500">
+            <div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-linear-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500">
               <a href={project.href} target="_blank" rel="noopener noreferrer">
                 <button className="mb-5 flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-md text-sm hover:bg-white/20 transition duration-300">
                   View Project <span className="text-base">↗</span>

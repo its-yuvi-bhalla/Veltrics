@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import { Plus, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -45,14 +46,15 @@ export default function FaqSection() {
       id="faq"
       className="relative bg-black text-white py-24 px-6 md:px-16 lg:px-28 overflow-hidden"
     >
-      {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/lemon.jpg"
           alt="Background"
-          className="w-full h-full object-cover opacity-50"
+          fill
+          className="object-cover opacity-50"
+          priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/90"></div>
       </div>
 
       {/* Content */}

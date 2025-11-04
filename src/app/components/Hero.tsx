@@ -16,7 +16,7 @@ function Hero() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-black/90 -z-10" />
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-[85vh]">

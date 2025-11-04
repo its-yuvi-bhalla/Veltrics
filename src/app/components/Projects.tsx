@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const projects = [
-  { id: 1, src: "/logo.png" },
+  { id: 1, src: "/logo.png", href : "https://www.andersonphysiotherapy.ca/" },
 ]
 
 export default function Projects() {
@@ -24,8 +24,7 @@ export default function Projects() {
       {/* Staggered Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {projects.map((project, index) => (
-          <div
-            key={project.id}
+          <a href={project.href} key={project.id}><div
             className={`relative overflow-hidden rounded-xl group transform transition-all duration-700 ease-out ${
               index % 2 === 0 ? "md:translate-y-4" : "md:-translate-y-4"
             }`}
@@ -39,12 +38,13 @@ export default function Projects() {
             />
 
             {/* Overlay Button */}
-            <div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500">
-              <button className="mb-5 flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-md text-sm hover:bg-white/20 transition duration-300">
+            <div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-linear-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500">
+              <span className="mb-6 inline-flex items-center gap-2 bg-white/5 px-4 py-2 rounded-md text-sm">
                 View Case Study <span className="text-base">↗</span>
-              </button>
+              </span>
             </div>
           </div>
+          </a>
         ))}
       </div>
 
@@ -54,6 +54,7 @@ export default function Projects() {
           Book a Call
         </Link>
       </div>
+      
     </section>
   )
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import Image from "next/image"
 import { Target, Code2, Rocket, Zap } from "lucide-react"
-import Link from "next/link"
 
 export default function Process() {
   return (
@@ -16,7 +15,7 @@ export default function Process() {
         fill
         className="object-cover object-center opacity-20 absolute inset-0 z-1"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black -z-10" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-black/80 to-black -z-10" />
 
       {/* === Content Wrapper === */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
