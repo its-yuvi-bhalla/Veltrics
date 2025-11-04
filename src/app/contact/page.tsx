@@ -1,9 +1,11 @@
 "use client"
 
 import React, { useState } from "react"
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react"
+import { Mail, MapPin, Linkedin } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function ContactPage() {
+  const router = useRouter()
   const [form, setForm] = useState({ name: "", email: "", message: "" })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -11,20 +13,19 @@ export default function ContactPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
-  })
-  if (res.ok) {
-    alert("Message sent successfully!")
-    setForm({ name: "", email: "", message: "" })
-  } else {
-    alert("Failed to send message.")
+    e.preventDefault()
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    })
+    if (res.ok) {
+      alert("Message sent successfully!")
+      setForm({ name: "", email: "", message: "" })
+    } else {
+      alert("Failed to send message.")
+    }
   }
-}
-
 
   return (
     <section className="relative text-white py-24 px-6 md:px-16 lg:px-28 overflow-hidden">
@@ -56,7 +57,7 @@ export default function ContactPage() {
       {/* === Contact Form === */}
       <form
         onSubmit={handleSubmit}
-        className="relative z-10 max-w-3xl mx-auto bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-lg space-y-6"
+        className="relative z-10 max-w-3xl mx-auto bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-lg space-y-6 shadow-[0_0_25px_rgba(255,255,255,0.1)]"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -98,23 +99,34 @@ export default function ContactPage() {
           />
         </div>
 
-        <button
-          type="submit"
-          className="w-full md:w-auto border border-white/30 text-white font-medium px-8 py-3 rounded-md hover:bg-white/10 transition shadow-[0_0_15px_rgba(255,255,255,0.15)]"
-        >
-          Send Message
-        </button>
+        {/* Centered Buttons */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
+          <button
+            type="submit"
+            className="border cursor-pointer border-white/30 text-white font-medium px-8 py-3 rounded-md hover:bg-white/10 transition shadow-[0_0_15px_rgba(255,255,255,0.15)]"
+          >
+            Send Message
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.back()}
+            className="border cursor-pointer border-white/30 text-white font-medium px-8 py-3 rounded-md hover:bg-white/10 transition shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+          >
+            ← Back
+          </button>
+        </div>
       </form>
 
       {/* === Contact Info === */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 mt-16 text-gray-300">
         <div className="flex items-center gap-3">
-          <Mail className="w-5 h-5" />
+          <Mail href="mailto:inquiries@veltrics.ca" className="w-5 h-5" />
           <p>inquiries@veltrics.ca</p>
         </div>
         <div className="flex items-center gap-3">
           <a href="https://www.linkedin.com/company/veltrics/posts/?feedView=all">
-          <Linkedin className="w-5 h-5" />
+            <Linkedin className="w-5 h-5" />
           </a>
         </div>
         <div className="flex items-center gap-3">

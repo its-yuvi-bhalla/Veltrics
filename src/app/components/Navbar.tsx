@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { Sparkles } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import Image from "next/image"
 
 export default function Navbar() {
@@ -39,10 +39,10 @@ export default function Navbar() {
       </nav>
 
       {/* CTA Button */}
-      <button className="flex items-center gap-2 border border-white/20 bg-white/10 px-5 py-2.5 rounded-full text-sm text-white hover:bg-white/20 transition">
-        <Sparkles className="w-4 h-4" />
-        Get Started
+      <a href="https://www.linkedin.com/company/veltrics/posts/?feedView=all" target='_blank'><button className="flex items-center gap-2 border border-white/20 bg-white/10 px-5 py-2.5 rounded-full text-sm text-white hover:bg-white/20 transition">
+        <Linkedin className="w-4 h-4" />
       </button>
+      </a>
     </header>
   )
 }

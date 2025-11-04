@@ -5,7 +5,10 @@ import Link from "next/link"
 
 export default function ClientReviews() {
   return (
-    <section id="reviews" className="bg-black text-white py-24 px-6 md:px-16 lg:px-28 space-y-20">
+   <section
+  id="reviews"
+  className="bg-black text-white py-24 px-6 md:px-16 lg:px-28 space-y-20 shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+>
       {/* ========== TOP SECTION ========== */}
       <div className="flex flex-col lg:flex-row items-center gap-12">
         {/* LEFT IMAGE */}
