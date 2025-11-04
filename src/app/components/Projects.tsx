@@ -24,7 +24,7 @@ export default function Projects() {
       {/* Staggered Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {projects.map((project, index) => (
-          <a href={project.href} key={project.id}><div
+          <a href={project.href} target='_blank' key={project.id}><div
             className={`relative overflow-hidden rounded-xl group transform transition-all duration-700 ease-out ${
               index % 2 === 0 ? "md:translate-y-4" : "md:-translate-y-4"
             }`}
