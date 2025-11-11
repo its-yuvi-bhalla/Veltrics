@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/veltricsFavicon.jpg?v=8"
+          href="/veltrics.png?v=8"
           type="image/png"
         />
         <title>Veltrics — Digital Solutions for Modern Businesses</title>
