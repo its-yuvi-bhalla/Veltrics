@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const projects = [
   { id: 1, src: "/logo.png", href : "https://www.andersonphysiotherapy.ca/" },
+  { id: 2, src: "/ks-logo.jpg", href : "https://www.ksexteriorsolutions.com/" },
 ]
 
 export default function Projects() {
