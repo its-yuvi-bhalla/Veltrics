@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation"
 
 const projects = [
   { id: 1, src: "/logo.png", href: "https://www.andersonphysiotherapy.ca/" },
+    { id: 2, src: "/ks-logo.jpg", href : "https://www.ksexteriorsolutions.com/" },
+  { id: 3, src: "https://i.imgur.com/qSYCyST_d.webp?maxwidth=760&fidelity=grand", href :  "https://www.creeativeminds.com/" },
 ]
 
 export default function Projects() {
